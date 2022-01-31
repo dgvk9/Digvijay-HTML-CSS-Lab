@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab</title>
+    <style>
+        body{
+            background-color: honeydew;
+            height: auto;
+            margin: 0%;
+        }
+        header h1{
+            background-color: red;
+            margin: 0%;
+            padding: 20px;
+            text-align: center;
+        }
+        #navigate{
+            position: sticky;
+            top: 0%;
+            z-index: 1;
+        }
+        .menu{
+            margin: 0%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .menu li a{
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        .menu li{
+            padding: 10px;
+            display: inline-block;       
+        }
+        .menu li:hover{
+            background-color: rgba(0,0,0,0.8);
+        }
+        .menu li:nth-child(2):hover #dd_1, .menu li:nth-child(3):hover #dd_2{
+            display: block;
+        }
+        #dd_1,#dd_2{
+            position: absolute;
+            width: auto;
+            max-width: 150px;
+            display: none;
+            top: 40px;
+            background-color: whitesmoke;
+            padding: 0%;
+        }
+        #dd_1 li, #dd_2 li{
+            display: block;
+        }
+        #dd_1 li:hover, #dd_2 li:hover{
+            background-color: aqua;
+        }
+        #dd_1 li a, #dd_2 li a{
+            font-size: 16px;
+            color: steelblue;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Demo of Dropdown</h1>
+    </header>
+        <nav id="navigate">
+            <ul class="menu">
+                <li><a href="#">link1</a></li>
+                <li><a href="#">link2</a>
+                    <ul id="dd_1">
+                        <li><a href="#">DD_Link_1</a></li>
+                        <li><a href="#">DD_Link_2</a></li>
+                        <li><a href="#">DD_Link_3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">link3</a>
+                    <ul id="dd_2">
+                        <li><a href="#">DD_Link_1</a></li>
+                        <li><a href="#">DD_Link_2</a></li>
+                        <li><a href="#">DD_Link_3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+</body>
+</html>
